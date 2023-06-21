@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Poiret+One&family=Press+Start+2P&display=swap");
+
 :root {
   --penguin-face: white;
   --penguin-picorna: orange;
@@ -58,7 +60,7 @@ body {
   position: absolute;
 }
 
-.penguin:active {
+.penguin:hover {
   transform: scale(1.5);
   cursor: not-allowed;
 }
@@ -167,8 +169,56 @@ body {
 
 .shirt div {
   font-weight: initial;
-  top: 22.5px;
-  left: 12px;
+  top: 5px;
+  left: 30px;
+  animation: heart-beat 3s ease-in-out 1s infinite;
+}
+
+.shirt p {
+  font-size: 20px;
+  bottom: -200px;
+  left: -200px;
+  color: #150d54;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+}
+
+.love-button {
+  width: 200px;
+  height: 50px;
+  bottom: -170px;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.love-button:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-10deg);
+}
+
+@keyframes heart-beat {
+  50% {
+    transform: scale(2);
+  }
 }
 
 .penguin-body {
@@ -260,4 +310,19 @@ body {
   z-index: 3;
   position: absolute;
   margin-top: -58px;
+}
+
+.ground p {
+  bottom: -1%;
+  position: absolute;
+  font-size: 42px;
+  text-align: center;
+  color: #2b073f;
+  display: none;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+}
+
+.penguin:hover + .ground p {
+  display: block;
 }
